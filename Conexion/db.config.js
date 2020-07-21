@@ -1,8 +1,8 @@
 module.exports = {
-    HOST: "192.241.134.10",
-    USER: "root",
-    PASSWORD: "fernando",
-    DB: "techweberp",
+    HOST: "18.221.14.181",
+    USER: "gestor",
+    PASSWORD: "P@$$B2020.F",
+    DB: "colegiosurvey",
     dialect: "mysql",
     pool: {
       max: 5,

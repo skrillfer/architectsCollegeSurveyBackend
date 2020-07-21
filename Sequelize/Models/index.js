@@ -2,7 +2,7 @@ const dbConfig = require("../../conexion/db.config");
 console.log(dbConfig.PASSWORD);
 const Sequelize = require("sequelize");
 //database,username,password
-const sequelize = new Sequelize('ERPTECHWEB', 'testERP', 'techweb2020', {
+const sequelize = new Sequelize(dbConfig.DB, dbConfig.USER, dbConfig.PASSWORD, {
   host: dbConfig.HOST,
   dialect: dbConfig.dialect,
   operatorsAliases: false,
