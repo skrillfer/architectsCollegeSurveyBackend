@@ -47,9 +47,11 @@ db.sequelize.sync();
 // Set routes
 require('./Sequelize/Routes/Survey.Routes')(app);
 
+/*
 app.get('/*', function (req, res) {
   res.sendFile(path.join(__dirname + '/frontend/', 'build', 'index.html'));
 });
+*/
 
 app.get('/', function (req, res) {
   res.send('Hello World!');
