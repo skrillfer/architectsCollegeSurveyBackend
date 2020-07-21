@@ -49,9 +49,6 @@ db.sequelize.sync();
 require('./Sequelize/Routes/Survey.Routes')(app);
 
 
-app.get('/*', function (req, res) {
-  res.sendFile(path.join(__dirname + '/frontend/', 'build', 'index.html'));
-});
 
 /*
 app.get('/', function (req, res) {
@@ -73,6 +70,10 @@ app.get('/getFile',(req, res)=>{
 
 app.get('/getFileAnexo',(req, res)=>{
   res.download('files/carta_anexo.docx');
+});
+
+app.get('/*', function (req, res) {
+  res.sendFile(path.join(__dirname + '/frontend/', 'build', 'index.html'));
 });
 
 app.listen(5050, function () {
