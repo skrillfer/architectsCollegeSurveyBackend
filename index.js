@@ -48,15 +48,15 @@ db.sequelize.sync();
 require('./Sequelize/Routes/Survey.Routes')(app);
 
 
-app.get('/*', function (req, res) {
+app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname + '/frontend/', 'build', 'index.html'));
 });
 
-
+/*
 app.get('/', function (req, res) {
   res.send('Hello World!');
 });
-
+*/
 app.post('/saveFile',upload.array('file',6),(req, res,next)=>{
   if (!req.files) {
     const error = new Error('Please upload a file')
