@@ -1,4 +1,4 @@
-const dbConfig = require("../../conexion/db.config");
+const dbConfig = require("../../Conexion/db.config");
 console.log(dbConfig.PASSWORD);
 const Sequelize = require("sequelize");
 //database,username,password
