@@ -27,8 +27,6 @@ const db = {};
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
-db.Stock = require("./Stock.js")(sequelize, Sequelize);
-db.Bodega = require("./Bodega")(sequelize, Sequelize);
-db.Prod = require("./Prod")(sequelize, Sequelize);
+db.Survey = require("./Survey.js")(sequelize, Sequelize);
 
 module.exports = db;

@@ -1,5 +1,5 @@
 module.exports = {
-    HOST: "localhost",
+    HOST: "192.241.134.10",
     USER: "root",
     PASSWORD: "fernando",
     DB: "techweberp",

@@ -78,5 +78,5 @@ module.exports = (sequelize, Sequelize) => {
         }
 
     });
-    return Stock;
+    return Survey;
 }
