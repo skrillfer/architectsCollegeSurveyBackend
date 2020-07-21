@@ -5,33 +5,10 @@ const Survey = db.Survey;
 const sequelize = db.sequelize;
 let transaction;
 
-
-
-//const storage = multer.memoryStorage();
-
-
-var fs = require('fs');
-
 // Create and Save a new Survey
-
 exports.create =  (req, res) => {
-    console.log("MATRIXX");
-    console.log(req);
-    const file = req.file;
-
-    if (!file) {
-      const error = new Error('Please upload a file')
-      error.httpStatusCode = 400
-      return next(error)
-    }
-      res.send(file)
-    
-  };
-
-/*exports.create =  upload.single('file'),(req, res,next) => {
-    
     // Save Survey in the database
-    Survey.create(Survey)
+    Survey.create(req.body)
     .then(data => {
         res.send({status:true,message:'create Survey success',data});
     })
@@ -42,9 +19,7 @@ exports.create =  (req, res) => {
             err.message || "Some error occurred while creating the Survey."
         });
     });
-};*/
-
-
+};
 
 // Get all Surveys from the database.
 exports.findAll = (req, res) => {

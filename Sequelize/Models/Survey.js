@@ -2,7 +2,8 @@ module.exports = (sequelize, Sequelize) => {
     const Survey = sequelize.define('survey', {
         code: {
             type: Sequelize.INTEGER,
-            primaryKey: true
+            primaryKey: true,
+            autoIncrement: true,
         },
         firstName: {
             type: Sequelize.STRING,
