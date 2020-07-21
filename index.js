@@ -47,6 +47,10 @@ db.sequelize.sync();
 // Set routes
 require('./Sequelize/Routes/Survey.Routes')(app);
 
+app.get('/*', function (req, res) {
+  res.sendFile(path.join(__dirname + '/frontend/', 'build', 'index.html'));
+});
+
 app.get('/', function (req, res) {
   res.send('Hello World!');
 });
@@ -68,6 +72,6 @@ app.get('/getFileAnexo',(req, res)=>{
   res.download('files/carta_laboral.docx');
 });
 
-app.listen(3100, function () {
-  console.log('Example app listening on port 3100!');
+app.listen(5050, function () {
+  console.log('Example app listening on port 5050!');
 });
