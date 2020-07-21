@@ -71,7 +71,7 @@ app.get('/getFile',(req, res)=>{
 });
 
 app.get('/getFileAnexo',(req, res)=>{
-  res.download('files/carta_laboral.docx');
+  res.download('files/carta_anexo.docx');
 });
 
 app.listen(5050, function () {
