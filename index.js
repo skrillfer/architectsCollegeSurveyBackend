@@ -33,6 +33,7 @@ var corsOptions = {
 };
 app.use(cors(corsOptions));
 app.use(express.static(__dirname + '/public'));
+app.use(express.static(path.join(__dirname + '/frontend/', 'build')));
 
 app.use(express.json()); // Make sure it comes back as json
 
